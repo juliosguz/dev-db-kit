@@ -1,5 +1,7 @@
 # dev-db-kit 🧰
 
+> 🌐 Available languages: [Español 🇪🇸](./README.es.md)
+
 A ready-to-use local development environment with real, preconfigured databases.  
 Ideal for developers who want to start projects, test integrations, or explore realistic database schemas without setup hassle.
 
@@ -85,5 +87,3 @@ Reference:
 ## 📄 License
 
 Your code is under MIT. The `classicmodels` dataset remains under EPL‑1.0.
-
-> 🌐 Available languages: [Español 🇪🇸](./README.es.md)
