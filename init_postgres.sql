@@ -1,18 +1,19 @@
 /* Create the database */
-CREATE DATABASE classicmodels;
+-- CREATE DATABASE classicmodels;
 
 /* Switch to the classicmodels database */
 
+SET standard_conforming_strings = off;
 
 /* Drop existing tables  */
-DROP TABLE  productlines;
-DROP TABLE  products;
-DROP TABLE  offices;
-DROP TABLE  employees;
-DROP TABLE  customers; 
-DROP TABLE  payments;
-DROP TABLE  orders;
-DROP TABLE  orderdetails;
+-- DROP TABLE  productlines;
+-- DROP TABLE  products;
+-- DROP TABLE  offices;
+-- DROP TABLE  employees;
+-- DROP TABLE  customers; 
+-- DROP TABLE  payments;
+-- DROP TABLE  orders;
+-- DROP TABLE  orderdetails;
 
 /* Create the tables */
 CREATE TABLE productlines (
@@ -30,7 +31,7 @@ CREATE TABLE products (
   productScale VARCHAR(10) NOT NULL,
   productVendor VARCHAR(50) NOT NULL,
   productDescription TEXT NOT NULL,
-  quantityInStock smallint(6) NOT NULL,
+    quantityInStock smallint NOT NULL,
   buyPrice NUMERIC(10,2) NOT NULL,
   MSRP NUMERIC(10,2) NOT NULL,
   PRIMARY KEY (productCode),
@@ -108,7 +109,7 @@ CREATE TABLE orderdetails (
   productCode VARCHAR(15) NOT NULL,
   quantityOrdered int NOT NULL,
   priceEach NUMERIC(10,2) NOT NULL,
-  orderLineNumber smallint(6) NOT NULL,
+    orderLineNumber smallint NOT NULL,
   PRIMARY KEY (orderNumber,productCode),
   FOREIGN KEY (orderNumber) REFERENCES orders (orderNumber),
   FOREIGN KEY (productCode) REFERENCES products (productCode)
